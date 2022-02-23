@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Redirect PR description generator</title>
+</head>
+<body>
+  <nav>
+    <h3>Generate redirect descriptions</h3>
+    <button onclick="generate()">Generate</button>
+  </nav>
+  <div class="container">
+    <div class="section 1">
+      <h1>Input</h1>
+      <textarea name="input" id="input" cols="100" rows="10">
+## The redirects puts on here must have to be as the following format
+## [www.origin.com] [https://www.destination.com]
+## For example: www.google.com/login https://cm.google.com/account-login/
+## The empty lines and lines with '#' will be skipped.
+
+www.google.com/login https://cm.google.com/account-login/
+www.twitter.com/login https://cm.twitter.com/account-login/
+      </textarea>
+    </div>
+    <div class="section 2">
+      <h1>Output in Markdown</h1>
+      <p id="output"></p>
+    </div>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>
