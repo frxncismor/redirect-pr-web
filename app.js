@@ -26,7 +26,6 @@ function generate() {
       }
     }
   }
-  console.log(outputArray);
   output.innerText = outputArray.join('');
 
 }
